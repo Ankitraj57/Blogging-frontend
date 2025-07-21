@@ -1,0 +1,113 @@
+.about-section {
+    width: 100vw;
+    min-height: 100vh;
+    padding: 80px 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #f0f4ff;
+  padding: 80px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.about-container {
+  max-width: 900px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.about-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+}
+
+.about-divider {
+  width: 80px;
+  height: 4px;
+  background-color: #f6a821;
+  margin: 0 auto 32px;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #f6a821aa;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: #e3e9ff;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #f6a821;
+  text-shadow: 0 0 6px #f6a821cc;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 15px;
+  }
+
+  .about-container {
+    padding: 30px 20px;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+
+  .about-divider {
+    width: 60px;
+    height: 3px;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+
+  .about-container {
+    padding: 20px 15px;
+  }
+}
+/* Initially hidden */
+.fade-in-hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* When visible, fade and slide up */
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+}

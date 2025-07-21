@@ -1,0 +1,126 @@
+/* Admin Route Loading Styles */
+.admin-route-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+  padding: 2rem;
+  text-align: center;
+}
+
+.admin-route-spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.25rem solid rgba(99, 102, 241, 0.2);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: admin-route-spin 1s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+.admin-route-message {
+  font-size: 1.125rem;
+  color: #4b5563;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* Admin Access Denied Styles */
+.admin-access-denied {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.admin-access-denied-icon {
+  font-size: 4rem;
+  color: #ef4444;
+  margin-bottom: 1.5rem;
+}
+
+.admin-access-denied h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.admin-access-denied p {
+  color: #6b7280;
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin-bottom: 2rem;
+  line-height: 1.625;
+}
+
+.admin-access-denied .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #6366f1;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.admin-access-denied .btn:hover {
+  background-color: #4f46e5;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
+}
+
+/* Animation */
+@keyframes admin-route-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .admin-access-denied {
+    padding: 1.5rem;
+  }
+  
+  .admin-access-denied h2 {
+    font-size: 1.5rem;
+  }
+  
+  .admin-route-message {
+    font-size: 1rem;
+  }
+}
+
+/* Admin Route Transition */
+.admin-route-enter {
+  opacity: 0;
+}
+
+.admin-route-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.admin-route-exit {
+  opacity: 1;
+}
+
+.admin-route-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}

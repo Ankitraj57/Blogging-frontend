@@ -1,0 +1,375 @@
+.admin-dashboard {
+  background-color: #f7fafc;
+  min-height: calc(100vh - 16rem);
+  padding: 1.5rem;
+  max-width: 72rem;
+  margin: 4rem auto 0;
+}
+
+/* Loading states */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+}
+
+.loading-spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #e2e8f0;
+  border-top: 2px solid #4299e1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error messages */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 20rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.error-message {
+  margin: 1rem 0;
+  color: #e53e3e;
+}
+
+.error-details {
+  color: #718096;
+  margin: 0.5rem 0;
+}
+
+.error-refresh {
+  color: #718096;
+  margin-top: 1rem;
+}
+
+/* Icon styles */
+.icon-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-text .inline {
+  margin-right: 0.5rem;
+}
+
+/* Header styles */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.admin-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+}
+
+.admin-tab {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-tab:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-tab.active {
+  background-color: #4299e1;
+  color: #ffffff;
+}
+
+/* Search section */
+.admin-search {
+  margin-bottom: 1.5rem;
+}
+
+.admin-search .flex {
+  gap: 0.75rem;
+}
+
+.admin-search-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-search-input:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+}
+
+.admin-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  border: 1px solid #cbd5e0;
+  background-color: #ffffff;
+  color: #1a202c;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-button:hover {
+  background-color: #f7fafc;
+  border-color: #a0aec0;
+}
+
+.admin-button.active {
+  background-color: #4299e1;
+  color: #ffffff;
+  border-color: #4299e1;
+}
+
+.admin-search-input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-search-input:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+}
+
+/* Stats grid */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Stats card */
+.stats-card {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.stats-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stats-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #718096;
+}
+
+.stat-value-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+/* Content section */
+.admin-content {
+  gap: 1.5rem;
+}
+
+/* Section styles */
+.admin-section {
+  background-color: #ffffff;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.admin-section-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a202c;
+}
+
+/* Table styles */
+.admin-table-container {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.admin-table-header {
+  background-color: #f7fafc;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.admin-table-header-cell {
+  padding: 1rem;
+  font-weight: 600;
+  color: #4a5568;
+  border-bottom: 2px solid #e2e8f0;
+  text-align: left;
+}
+
+.admin-table-body {
+  background-color: #ffffff;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.admin-table-cell {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+}
+
+.admin-table-cell:last-child {
+  border-bottom: none;
+}
+
+.table-cell-text {
+  color: #1a202c;
+  font-weight: 500;
+}
+
+.table-cell-text-muted {
+  color: #718096;
+}
+
+/* Action buttons */
+.action-button {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-right: 0.5rem;
+}
+
+.action-button:hover {
+  opacity: 0.9;
+}
+
+.action-button.deactivate {
+  background-color: #ed8936;
+  color: #ffffff;
+}
+
+.action-button.delete {
+  background-color: #e53e3e;
+  color: #ffffff;
+}
+
+/* Status badges */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 9999px;
+}
+
+.status-badge.active {
+  background-color: #48bb78;
+  color: #ffffff;
+}
+
+.status-badge.inactive {
+  background-color: #f56565;
+  color: #ffffff;
+}
+
+.status-badge.pending {
+  background-color: #ffd63f;
+  color: #1a202c;
+}
+
+.status-badge.published {
+  background-color: #48bb78;
+  color: #ffffff;
+}
+
+/* Button styles */
+.admin-button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-button:hover {
+  opacity: 0.9;
+}
+
+.admin-button.delete {
+  color: #dc2626;
+}
+
+.admin-button.delete:hover {
+  color: #b91c1c;
+}
+
+.admin-button.toggle {
+  color: #4338ca;
+}
+
+.admin-button.toggle:hover {
+  color: #3730a3;
+}

@@ -1,0 +1,25 @@
+/* App-wide styles */
+
+/* Add margin below navbar */
+.main-content {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Ensure consistent spacing for all pages */
+.page-container {
+  min-height: calc(100vh - 200px); /* Adjust based on navbar height */
+  padding: 2rem 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .page-container {
+    padding: 1.5rem 0;
+  }
+}
